@@ -1,0 +1,12 @@
+.section {
+  padding: 10px;
+}
+
+.table-header {
+  font-size: large;
+  font-weight: bold;
+}
+
+th, td {
+  padding: 5px 15px;
+}
