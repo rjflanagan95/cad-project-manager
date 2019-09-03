@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import "./JobForm.css";
+import "./JobForm.css";
 
 class JobForm extends Component {
     constructor(props) {
@@ -25,13 +25,14 @@ class JobForm extends Component {
         event.preventDefault();
 
         console.log(this.state);
+        document.getElementById("job-form").reset();
     }
 
     render() {
         return (
-            <div className="job-form section">
-                <div className="table-header">Add a Job</div>
-                <form onSubmit={this.handleSubmit}>
+            <div className="section">
+                <div id="form-header">Add a Job</div>
+                <form id="job-form" onSubmit={this.handleSubmit}>
                     <div>
                         <label>Job Number:
                             <input type="text" id="job-num" name="jobNumber" onChange={(e) => this.changeUserInput(e.target)}></input>
@@ -48,7 +49,7 @@ class JobForm extends Component {
                         </label>
                     </div>
                     <div>
-                        <label>Notes: 
+                        <label>Notes:
                             <input type="text" id="jobNotes" name="jobNotes" onChange={(e) => this.changeUserInput(e.target)}></input>
                         </label>
                     </div>
